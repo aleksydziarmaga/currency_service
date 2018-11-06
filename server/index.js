@@ -14,7 +14,7 @@ app.get('/currencies/:baseCurrency', async(req, res) => {
                                 .map( currency => axios(`http://api.nbp.pl/api/exchangerates/rates/c/${currency}?format=json`));
     try {
         const response = await Promise.all(requests);
-        const data = response.map(({data}) => data);
+        const data = response.map(({ data }) => data);
         res.json(data);
     } catch (err) {
         console.error(err);

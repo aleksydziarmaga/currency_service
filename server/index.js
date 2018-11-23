@@ -4,7 +4,7 @@ const express = require('express');
 const CURRENCIES = require('./currencies.model');
 
 const app = express();
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 app.get('/', (req, res) => res.send("Currency service"));
 
@@ -37,8 +37,8 @@ app.get('/rsi', async(req, res) => {
                 gains.push(change);
                 sumGains += change;
             } else if (change < 0) {
-                losses.push(change)
-                sumLosses += change * -1
+                losses.push(change);
+                sumLosses += change * -1;
             }
         }
         const avgGains = sumGains/midRates.length;

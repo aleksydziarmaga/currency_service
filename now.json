@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "alias": "currency-service",
+  "public": true,
+  "type": "docker",
+  "features": {
+    "cloud": "v2"
+  }
+}

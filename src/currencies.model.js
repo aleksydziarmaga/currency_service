@@ -1,5 +1,4 @@
 const currencies = [
-    "PLN",
     "USD",
     "EUR",
     "GBP"
